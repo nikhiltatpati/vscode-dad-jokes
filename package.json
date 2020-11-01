@@ -2,11 +2,16 @@
   "name": "dad-jokes",
   "displayName": "Dad Jokes",
   "description": "Funny dad jokes",
+  "icon": "assets/dad-joke.png",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.50.0"
   },
-  "categories": [
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikhiltatpati/vscode-dad-jokes"
+  },
+"categories": [
     "Other"
   ],
   "activationEvents": [
