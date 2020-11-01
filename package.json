@@ -1,0 +1,64 @@
+{
+  "name": "dad-jokes",
+  "displayName": "Dad Jokes",
+  "description": "Funny dad jokes",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:dad-jokes.randomJoke"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dad-jokes.randomJoke",
+        "title": "Dad Jokes!"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Dad Jokes",
+        "properties": {
+          "dad-jokes.duration": {
+            "type": "string",
+            "description": "Set time interval for receiving joke notification",
+            "default": "10 min",
+            "enum": [
+              "1 min",
+              "5 min",
+              "10 min",
+              "30 min",
+              "1 hr",
+              "5 hr",
+              "10 hr"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.50.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
