@@ -1,6 +1,6 @@
 # dad-jokes README
 
-Programming is hard and even harder is to develop quality software. Developing quality software takes time, you need to spend countless hours writing, debugging and testing code. But that doesn't mean you need to beat up yourself and grind through the entire journey. Its equally important to take breaks!!!
+Programming is hard and even harder is to develop quality software. Developing quality software takes time, you need to spend countless hours writing, debugging and testing code but that doesn't mean you need to beat up yourself and grind through the entire journey. Its equally important to take breaks!!!
 
 This is a simple extension that sends you joke notification based on the time interval set by you. So you can have some time off and enjoy some crazy dad jokes!!🤩
 
