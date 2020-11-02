@@ -3,7 +3,8 @@
   "displayName": "Dad Jokes",
   "description": "Funny dad jokes",
   "icon": "assets/dad-joke.png",
-  "version": "1.0.0",
+  "publisher": "NikhilTatpati",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -22,7 +23,7 @@
     "commands": [
       {
         "command": "dad-jokes.randomJoke",
-        "title": "Dad Jokes!"
+        "title": "Get dad jokes"
       }
     ],
     "configuration": [

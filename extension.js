@@ -5,24 +5,7 @@ const axios = require("axios");
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-  function hasConfig(key) {
-    const conf = this.getConfig(key);
-    return conf !== null && conf !== undefined && conf !== "";
-  }
-
-  function getConfig(key) {
-    return this._config.has(`dad-jokes.${key}`)
-      ? this._config.get(`dad-jokes.${key}`)
-      : null;
-  }
-
-  async function setConfig(key, value) {
-    return await this._config.update(
-      `dad-jokes.${key}`,
-      value,
-      vscode.ConfigurationTarget.Global
-    );
-  }
+  
 
   const duration = vscode.workspace
     .getConfiguration()
@@ -40,19 +23,6 @@ function activate(context) {
     return duration;
   }
 
-  console.log(getMillis(time));
-
-  try {
-    axios
-      .get("https://icanhazdadjoke.com/", {
-        headers: { Accept: "application/json" },
-      })
-      .then((result) => {
-        vscode.window.showInformationMessage(result.data.joke);
-      });
-  } catch (e) {
-    console.error(e);
-  }
 
   setInterval(async function () {
     try {
